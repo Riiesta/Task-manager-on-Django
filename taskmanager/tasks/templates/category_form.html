@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление категории</title>
+</head>
+<body>
+    <h1>Добавить категорию</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Добавить</button>
+    </form>
+    <a href="{% url 'category_list' %}">Вернуться к списку категорий</a>
+</body>
+</html>
